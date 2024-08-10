@@ -11,4 +11,4 @@
 ## git clone https://github.com/JulioCezarbc/Desafio-VFLOWS.git
 
 ## Abrir o Projeto: Navegue até a pasta do projeto e abra o arquivo index.html em um navegador.
-## Utilizar o Formulário: Preencha os campos do formulário de fornecedor e produto. Anexe documentos se necessário e clique em "Salvar Fornecedor" para gerar um arquivo JSON com os dados inseridos.
+## Utilizar o Formulário: Preencha os campos do formulário de fornecedor e produto. Anexe documentos e clique em "Salvar Fornecedor" para gerar um arquivo JSON com os dados inseridos.
