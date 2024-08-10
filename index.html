@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style-guide/css/fluig-style-guide.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <title>Cadastro Fornecedor/Produto</title>
+
+</head>
+<body>
+    <header>
+        <h1 class="title text-center">CADASTRO FORNECEDOR/PRODUTO</h1>
+    </header>
+    <main class="fluig-style-guide">
+        <div class="card mb-4">
+            <div class="card-cabecalho">
+                <h2>Dados do Fornecedor</h2>
+            </div>
+            <div class="card-body">
+                <form id="form-fornecedor" class="form-horizontal">
+                    <div class="form-group row mb-3">
+                        <label for="razao-social" class="col-sm-2 col-form-label">Razão Social</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control inpFornecedor" id="razaoSocial" required>
+                        </div>
+                    
+                        <label for="cnpj" class="col-sm-2 col-form-label">CNPJ</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control inpFornecedor" maxlength="14" id="cnpj" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row mb-3">
+                        <label for="nome-fantasia" class="col-sm-2 col-form-label">Nome Fantasia</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control inpFornecedor" id="nomeFantasia" required>
+                        </div>
+                        
+                        <label for="inscricao-estadual" class="col-sm-2 col-form-label">Inscrição Estadual</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control inpFornecedor" maxlength="9" id="inscEstadual">
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <label for="cep" class="col-sm-2 col-form-label">CEP</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="cep" class="form-control inpFornecedor">
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <label for="endereco" class="col-sm-2 col-form-label">Endereço</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control inpFornecedor" id="endereco" required>
+                        </div>
+                        <label for="bairro" class="col-sm-2 col-form-label">Bairro</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control inpFornecedor" id="bairro" required>
+                        </div>
+                        
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <label for="complemento" class="col-sm-2 col-form-label">Complemento</label>
+                        <div class="col-sm-4">
+                            <input type="text" id="complemento" class="form-control inpFornecedor">
+                        </div>
+
+                        <label for="estado" class="col-sm-2 col-form-label">Estado</label> 
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control inpFornecedor" id="uf" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <label for="email" class="col-sm-2 col-form-label">Email</label> 
+                        <div class="col-sm-4">
+                            <input type="email" class="form-control inpFornecedor" id="email" required>
+                        </div>
+                        <label for="Telefone" class="col-sm-2 col-form-label">Telefone</label> 
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control inpFornecedor" maxlength="9" id="telefone" required>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+
+            <form id="form-produto" class="form-horizontal">
+                <div class="form-group row mb-3">
+                    <label for="descricao" class="col-sm-2 col-form-label">Descrição</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="descricao" required>
+                    </div>
+
+                    <label for="medida" class="col-sm-2 col-form-label">Unidade de Medida</label>
+                    <div class="col-sm-4">
+                        <select class="form-control" id="medida">
+                            <option value="UN">Unidade</option>
+                            <option value="KG">Quilograma</option>
+                            <option value="L">Litro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label for="quantidadeEstoque" class="col-sm-2 col-form-label">Quantidade em Estoque</label>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" id="quantidadeEstoque" required>
+                    </div>
+
+                    <label for="valorUni" class="col-sm-2 col-form-label">Valor Unitário</label>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" id="valorUni" required>
+                    </div>
+                </div>
+
+                <button class="btn btn-success" type="submit" id="btnProduto">Adicionar Produto</button>
+            </form>
+
+            <div class="card-cabecalho prod">
+                <h2>Produtos</h2>
+            </div>
+            <div class="card-estrutura">
+                
+                <table class="table table-bordered" id="tabelaProdutos">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>UND. Medida</th>
+                            <th>QTD. em Estoque</th>
+                            <th>Valor Unitário</th>
+                            <th>Valor Total</th>
+                            <th>Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-cabecalho">
+                <h2>Anexos</h2>
+            </div>
+            <div class="card-estrutura">
+                <table class="table table-bordered" id="tabelaAnexos">
+                    <thead>
+                        <tr>
+                            <th>Itens</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Documento anexo 1</td>
+                            <td>
+                                <button class="btn btn-danger btn-remover-anexo" data-id="${index}">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                                <button class="btn btn-info btn-visualizar-anexo" data-id="${index}">
+                                    <i class="bi bi-download"></i>
+                                </button>
+                                    
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input type="file" id="upload-documento" class="form-control-file">
+                <button class="btn btn-success" type="submit" id="btnAnexo">Anexar</button>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary" type="submit" id="btnSalvarFornecedor">Salvar Fornecedor</button>
+        </div>
+    </main>
+</body>
+<script src="/js/loading.js" defer></script>
+<script src="/js/script.js" defer></script>
+<script src="/js/validations.js" defer></script>
+
+
+</html>
